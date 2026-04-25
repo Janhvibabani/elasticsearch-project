@@ -25,7 +25,7 @@ function App() {
     const startEs = Date.now();
 
     // PostgreSQL request
-    fetch(`http://localhost:8080/search/postgres?q=${query}`)
+    fetch(`https://elasticsearch-app-s11z.onrender.com/search/postgres?q=${query}`)
       .then(res => res.json())
       .then(data => {
         setPgData(data);
@@ -34,7 +34,7 @@ function App() {
       });
 
     // Elasticsearch request
-    fetch(`http://localhost:8080/search/es?q=${query}`)
+    fetch(`https://elasticsearch-app-s11z.onrender.com/search/es?q=${query}`)
       .then(res => res.json())
       .then(data => {
         setEsData(data);
